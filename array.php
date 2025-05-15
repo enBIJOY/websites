@@ -74,5 +74,60 @@
     
         ?>
 
+
+
+        <!-- Associative Arrays -->
+
+
+        <h1> Grooserys and Medicine items list </h1>
+        <?php
+        $grMed = [
+            [
+                'name' =>'poteto',
+                'find' =>'Vegitable Market',
+                'price' =>'20-30tk per kg'
+            ],
+            [
+                'name' =>'paracitamal',
+                'find' =>'Medical shop',
+                'price' =>'12 tk per stripe'
+            ]
+        ]
+        ?>
+        <ul>
+        <?php foreach ($grMed as $grmd): ?>
+            <li>
+            <?= $grmd ['find']; ?>
+            </li>
+         <?php endforeach; ?>
+        </ul>
+
+
+
+
+        <h1> Compponents </h1>
+
+        <?php
+        $compo = [[
+            'name' => 'mouse',
+            'find' => 'startek',
+            'purchaseUrl' => 'http://example.com'
+        ],
+        [
+            'name' => 'key-board',
+            'find' => 'rayans',
+            'purchaseUrl' => 'http://example.com'
+        ]
+        ]
+        ?>
+        <ul>
+            <?php foreach($compo as $comp): ?>
+                <li>
+                    <a href="<?= $comp['purchaseUrl']?>">
+                    <?= $comp ['find']; ?>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+
 </body>
 </html>
